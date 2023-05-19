@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Record Grades</title>
+    <style>
+             body{
+            background-color: #3eb7d9ab;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+            background-color: #112868;
+
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color:white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 7px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #274590;
+        }
+        .top-menu {
+            background-color: #1e3b84;
+            padding: 10px;
+        }
+
+        .top-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .top-menu li a {
+            text-decoration: none;
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #112868;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #112868;
+            color: white;         }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-menu">
+        <ul>
+            <li><a href="teachermenu.html"> Home</a></li>
+            <li><a href="studentbooks.html"> Books</a></li>
+            <li><a href="recordgrade.html">Grades</a></li>
+            <li><a href="recordattendance.html">Attendance</a></li>
+            <li><div class="dropdown">
+                <a class="dropbtn">Reports</a>
+                <div class="dropdown-content">
+                    <a href="gradereport.html">Student Grade Report</a>
+                    <a href="attendancereport.html">Student Attendance Report</a>
+                </div>
+            </div></li>
+        </ul>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for sections..." oninput="searchAttendance()">
+    </div>
+
+    <table id="attendanceTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Quiz</th>
+                <th>Midterm 1</th>
+                <th>Midterm 2</th>
+                <th>Final</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td contenteditable="false">Muhammad Mustafa</td>
+                <td contenteditable="false">Mathematics Section 1</td>
+                <td contenteditable="false">18</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">20.5</td>
+                <td contenteditable="false">25</td>
+                <td contenteditable="false">86</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Ahmad Ali</td>
+                <td contenteditable="false">Mathematics Section 1</td>
+                <td contenteditable="false">17</td>
+                <td contenteditable="false">18</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">72</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Tahir Muhammad</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">18</td>
+                <td contenteditable="false">17</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">70</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Ali Mustafa</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">17</td>
+                <td contenteditable="false">16</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">22</td>
+                <td contenteditable="false">80</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Kawan Muhammad</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">79</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Rozhgar Qadir</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">23</td>
+                <td contenteditable="false">81</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Zhilwan Kamaran</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">18</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">20.5</td>
+                <td contenteditable="false">79</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Karwan Muhammad</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">25</td>
+                <td contenteditable="false">24</td>
+                <td contenteditable="false">94</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Kawa Najmadin</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">20.5</td>
+                <td contenteditable="false">73</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Peshawa Muhammad</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">22</td>
+                <td contenteditable="false">79</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Lawko Sidiq</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">22</td>
+                <td contenteditable="false">80</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Mustafa Kawa</td>
+                <td contenteditable="false">Mathematics Section 1</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">21</td>
+                <td contenteditable="false">79</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Darwn Mustafa</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">17</td>
+                <td contenteditable="false">80</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Drud Musanna</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">13</td>
+                <td contenteditable="false">69</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Ramyar Omed</td>
+                <td contenteditable="false">Mathematics Section 3</td>
+                <td contenteditable="false">13</td>
+                <td contenteditable="false">22</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">30</td>
+                <td contenteditable="false">84</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Kozhin Yasin</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">16</td>
+                <td contenteditable="false">79</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Meer Hamza</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">22</td>
+                <td contenteditable="false">23</td>
+                <td contenteditable="false">31</td>
+                <td contenteditable="false">90</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Miran Kareem</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">24</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">29</td>
+                <td contenteditable="false">87</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Zhin Hawkar</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">20.5</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">30</td>
+                <td contenteditable="false">85</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Sahand Husen</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">18</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">76</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Shanel Muhammad</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">80</td>
+            </tr>
+            <tr>
+                <td contenteditable="false">Hardi Muhammad</td>
+                <td contenteditable="false">Mathematics Section 2</td>
+                <td contenteditable="false">14</td>
+                <td contenteditable="false">19</td>
+                <td contenteditable="false">20</td>
+                <td contenteditable="false">22</td>
+                <td contenteditable="false">81</td>
+            </tr>
+        </tbody>
+    </table>
+   
+    <button onclick="saveChanges()" style="float:right; position: relative; bottom:64em; right:2em;">Send A Report</button>
+    <script>
+        function searchAttendance() {
+            var searchValue = document.getElementById("searchInput").value.toLowerCase();
+
+            var table = document.getElementById("attendanceTable");
+
+            var rows = table.getElementsByTagName("tr");
+            
+            for (var i = 1; i < rows.length; i++) {
+                var course = rows[i].getElementsByTagName("td")[1];
+                var courseName = course.textContent || course.innerText;
+
+                if (courseName.toLowerCase().indexOf(searchValue) > -1) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+        
+        function saveChanges() {
+            var table = document.getElementById("attendanceTable");
+            var rows = table.getElementsByTagName("tr");
+
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
+
+                for (var j = 0; j < cells.length; j++) {
+                    var cell = cells[j];
+                    cell.setAttribute("contenteditable", "false");
+                }
+            }
+
+            alert("Grade Report Has Been Sent successfully!");
+        }
+    </script>
+</body>
+</html>

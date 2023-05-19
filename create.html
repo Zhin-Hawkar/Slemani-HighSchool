@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3eb7d9ab;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .container h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .container form {
+      text-align: left;
+    }
+
+    .container label {
+      font-size: 18px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="text"],
+    .container input[type="tel"],
+    .container input[type="number"],
+    .container input[type="radio"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+
+    .container input[type="submit"] {
+      background-color: #3eb7d9ab;
+      color: #1e3b84;
+      padding: 14px 20px;
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+
+    .container input[type="submit"]:hover {
+      background-color: #1e3b84;
+      color: white;
+
+    }
+
+    .notification {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function showNotification() {
+      var notification = document.getElementById('notification');
+      notification.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Create Account</h1>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" required>
+      
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required>
+      
+      <label for="location">Location</label>
+      <input type="text" id="location" required>
+      
+      <label for="age">Age</label>
+      <input type="number" id="age" required>
+      
+      <label for="gender">Gender</label>
+      <input type="radio" id="gender-male" name="gender" value="male" required style="position:relative; bottom:0.5em;">
+      <label for="gender-male" style="position:absolute; bottom:10.5em;">Male</label>
+      <input type="radio" id="gender-female" name="gender" value="female" style="position:relative; bottom:0.7em;">
+      <label for="gender-female" style="position:absolute; bottom:9em;">Female</label>
+      
+      <label for="grade">Grade</label>
+      <input type="text" id="grade" required>
+
+      <label for="grade">Username</label>
+      <input type="text" id="grade" required>
+
+      <label for="grade">Password</label>
+      <input type="text" id="grade" required>
+      
+      <input type="submit" value="Create Account" onclick="showNotification(); return false;">
+    </form>
+    
+    <div id="notification" class="notification" style="display: none;">
+      You were registered successfully!
+    </div>
+  </div>
+</body>
+</html>

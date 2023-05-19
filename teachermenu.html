@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Education Software System</title>
+    <style>
+          body{
+            background-color: #3eb7d9ab;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+            background-color: #112868;
+
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color:white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 7px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #274590;
+        }
+        .top-menu {
+            background-color: #1e3b84;
+            padding: 10px;
+        }
+
+        .top-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .top-menu li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .book-list {
+            display: inline-block;
+        }
+        .book-list a {
+            text-decoration: none;
+            color: black;
+            margin:5px;
+        }
+
+        .book-list li {
+            display: inline-block;
+            margin-right: 10px;
+            
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 50px;
+        }
+        .course-list a{
+            text-decoration: none;
+            font-size: large;
+                }
+        .separator {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="top-menu">
+        <ul>
+            <li><a href="teachermenu.html"> Home</a></li>
+            <li><div class="dropdown">
+                <a class="dropbtn">Books</a>
+                <div class="dropdown-content">
+                    <a href="#">Grade 10 Books</a>
+                    <a href="#">Grade 11 Books</a>
+                    <a href="studentgrade12.html">Grade 12 Books</a>
+                </div>
+            </div></li>
+            <li><a href="recordgrade.html">Grades</a></li>
+            <li><a href="recordattendance.html">Attendance</a></li>
+            <li><div class="dropdown">
+                <a class="dropbtn">Reports</a>
+                <div class="dropdown-content">
+                    <a href="gradereport.html">Student Grade Report</a>
+                    <a href="attendancereport.html">Student Attendance Report</a>
+                </div>
+            </div></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Books</h2>
+        <ul class="book-list">
+            <li><a href="#"><img src="https://www.yeane.org/wp-content/uploads/2018/11/yeane.org-21111608403928129.jpg" style="width:160px; height:190px;"><footer style="text-align: center;"> Physics Grade 10</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-Ls2umaqVJ0s/X145x7eq69I/AAAAAAAABgc/r3iitZv9zl0iQQfc3XUsJZulOBZgS5UBQCLcBGAsYHQ/s1133/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B11%2B5.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Physics Grade 11</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-t6IzsNBUOZY/X2H79xkviNI/AAAAAAAABjQ/y4aawvhWtZMQtoQi4-kz5PPP4nnfR0DNgCLcBGAsYHQ/s1178/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B12%2B6.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Physics Grade 12</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-hEnjPP65nVc/X14Ed8iCPcI/AAAAAAAABd0/_Uv1xKsQuGADIROcUd3YU1f_QjX7gj8pACLcBGAsYHQ/s1127/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B10%2B7.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Mathematics Grade 10</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-3VdBWK9CPFg/X19VLAOBlsI/AAAAAAAABhM/IWBTcGn9AGMsXfsngZzKwgEv2KfhPZdGQCLcBGAsYHQ/s1133/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B11%2B9.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Mathematics Grade 11</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-oIoDlIIkE08/X2IM4wdhshI/AAAAAAAABjo/FIYa4nz7O4gdoL4bW7ouKteyl0y0UzAEwCLcBGAsYHQ/s1154/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B12%2B8.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Mathematics Grade 12</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-vMQ3gETpvz4/X13XEerXs3I/AAAAAAAABck/_PHKQgSUacEQDSX0qYPGuyX6Isi7cnfsACLcBGAsYHQ/s1133/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B10%2B1.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Biology Grade 10</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-k7xGdbGWBNE/X19Nn6C3vXI/AAAAAAAABgo/459czuPF354DOmoB0kCQ8EFmkDnS2EpDwCLcBGAsYHQ/s1133/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B11%2B6.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Biology Grade 11</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-F1acL9Hpv2E/X2eb2cAA7gI/AAAAAAAABng/k4RzkEEjy4Akc05dOx61YKVHczum6fsXwCLcBGAsYHQ/s1156/%25D9%25BE%25DB%2586%25D9%2584%25D8%25A7%2B12%2B7.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Biology Grade 12</footer></a></li>
+            <li><a href="#"><img src="https://image.winudf.com/v2/image/Y29tLmFwcG1rLm1hZ2F6aW5lLnNod2Fua2RsMTBfc2NyZWVuc2hvdHNfMF9mM2Y1NTVhYw/screen-0.webp?fakeurl=1&type=.webp" style="width:160px; height: 190px; "><footer style="text-align: center;">English Language Grade 10</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-TRpBLIUB8Kg/X14ylCcM_OI/AAAAAAAABf4/LOllM_6mg7sK57rpV5GsZJPURUbJJ_lWACLcBGAsYHQ/s1201/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B11%2B2.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">English Language Grade 11</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-dba0yAwEbqY/X2Ht_FFjlKI/AAAAAAAABig/mc7Al4MW64wa1EvCHD0DN0eMIFPjc_7mgCLcBGAsYHQ/s1201/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B12%2B3.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">English Language Grade 12</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-vYvlRNcv5Ug/X24EUyMuO5I/AAAAAAAAByo/AGTyxtCgVhchCYyJFXM6vYCHa6mdXJe_ACLcBGAsYHQ/s580/Capture%2B10%2B2.PNG" style="width:160px; height: 190px; "><footer style="text-align: center;">Arabic Language Grade 10</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-JzZH0v2z7AU/X1egXlCi_8I/AAAAAAAABOs/Zs6eJKchE5c2T5zD4FodLzWXJXmkhDVagCLcBGAsYHQ/s1132/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B8%2B2.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Arabic Language Grade 11</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-KNL7-Wdx-tg/X19io0mfDOI/AAAAAAAABiU/SeMRk4QS5iM248p8cGl9tVkYHMxmnXMXQCLcBGAsYHQ/s1146/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B12%2B2.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Arabic Language Grade 12</footer></a></li>
+            <li><a href="#"><img src="https://www.koskikurd.net/wanekani%20xuendin/10/5.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Chemistry Grade 10</footer></a></li>
+            <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmEwc97PfKXkp4ddEiCmgREKFpH0Nc8z_1bYcRTNtGGP0d8jbjRc7eaqwSpe9jByG1NkE&usqp=CAU" style="width:160px; height: 190px; "><footer style="text-align: center;">Chemistry Grade 11</footer></a></li>
+            <li><a href="#"><img src="https://www.koskikurd.net/wanekani%20xuendin/12/6.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Chemistry Grade 12</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-RgO4NyQoEh8/X13Y_PxXJDI/AAAAAAAABcw/92Mnj2hDXF4JpYxOz9cy0uoS2JNGkqxCACLcBGAsYHQ/s1214/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B10%2B2.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Kurdish Grade 10</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-WhVfa1Al1yw/YVbDwYd_1dI/AAAAAAAACgI/ESgzGZBsWSstn3p77EB75DyDyTQ3ZUO9wCLcBGAsYHQ/s1280/243186232_1838785939627847_3962947427333028436_n.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Kurdish Grade 11</footer></a></li>
+            <li><a href="#"><img src="https://1.bp.blogspot.com/-poAwq4E_-KE/X19gnN_RhWI/AAAAAAAABiI/6p-njUFtAgok1kPJDUb0d3hFLlFZZbo8gCLcBGAsYHQ/s1085/%25D9%25BE%25DB%2586%25D9%2584%25DB%258C%2B12%2B1.jpg" style="width:160px; height: 190px; "><footer style="text-align: center;">Kurdish Grade 12</footer></a></li>
+        </ul>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="section">
+        <h2 class="section-title">Courses</h2>
+        <ul class="course-list">
+            <div><a href="#">Mathematics Grade 10</a></div>
+            <div><a href="#">Mathematics Grade 11</a></div>
+            <div><a href="#">Mathematics Grade 12</a></div>
+            <div><a href="#">Biology Grade 10</a></div>
+            <div><a href="#">Biology Grade 11</a></div>
+            <div><a href="#">Biology Grade 12</a></div>
+            <div><a href="#">English Language Grade 10</a></div>
+            <div><a href="#">English Language Grade 11</a></div>
+            <div><a href="#">English Language Grade 12</a></div>
+            <div><a href="#">Arabic Language Grade 10</a></div>
+            <div><a href="#">Arabic Language Grade 11</a></div>
+            <div><a href="#">Arabic Language Grade 12</a></div>
+            <div><a href="#">Physics Grade 10</a></div>
+            <div><a href="#">Physics Grade 11</a></div>
+            <div><a href="#">Physics Grade 12</a></div>
+            <div><a href="#">Chemistry Grade 10</a></div>
+            <div><a href="#">Chemistry Grade 11</a></div>
+            <div><a href="#">Chemistry Grade 12</a></div>
+        </ul>
+    </div>
+</body>
+</html>

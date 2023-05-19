@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Attendance Records</title>
+    <style>
+         body{
+            background-color: #3eb7d9ab;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+            background-color: #112868;
+
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color:white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 7px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #274590;
+        }
+        .top-menu {
+            background-color: #1e3b84;
+            padding: 10px;
+        }
+
+        .top-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .top-menu li a {
+            text-decoration: none;
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #112868;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #112868;
+            color: white;
+        }
+
+        .search-container {
+            margin-bottom: 25px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            margin-top: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-menu">
+        <ul>
+            <li><a href="studentmenu.html"> Home</a></li>
+            <li><div class="dropdown">
+                <a class="dropbtn">Books</a>
+                <div class="dropdown-content">
+                    <a href="#">Grade 10 Books</a>
+                    <a href="#">Grade 11 Books</a>
+                    <a href="studentgrade12.html">Grade 12 Books</a>
+                </div>
+            </div></li>
+            <li><a href="studentgrades.html">Grades</a></li>
+            <li><a href="studentattendance.html">Attendance</a></li>
+        </ul>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for courses..." oninput="searchAttendance()">
+    </div>
+
+    <table id="attendanceTable">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Present</th>
+                <th>Absent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Math</td>
+                <td>20</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Biology</td>
+                <td>16</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>19</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Arabic</td>
+                <td>15</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>17</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td>18</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Kurdish</td>
+                <td>19</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function searchAttendance() {
+            var searchValue = document.getElementById("searchInput").value.toLowerCase();
+
+            var table = document.getElementById("attendanceTable");
+
+            var rows = table.getElementsByTagName("tr");
+            
+            for (var i = 1; i < rows.length; i++) {
+                var course = rows[i].getElementsByTagName("td")[0];
+                var courseName = course.textContent || course.innerText;
+
+                if (courseName.toLowerCase().indexOf(searchValue) > -1) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

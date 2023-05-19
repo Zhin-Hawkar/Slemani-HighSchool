@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biology Grdae 12</title>
+    <style>
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .print-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Biology Grdae 12</h1>
+
+    <table id="courseTable">
+        <thead>
+            <tr>
+                <th>Assessment Component</th>
+                <th>First Semester Grades</th>
+                <th>Second Semester Grades</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Quiz</td>
+                <td>85</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>Midterm 1</td>
+                <td>65</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Midterm 2</td>
+                <td>95</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Project</td>
+                <td>90</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Final Exam</td>
+                <td>95</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Total Grade: <span id="totalGrade"></span></p>
+
+    <button class="print-button" onclick="printResult()">Print</button>
+
+    <script>
+        function calculateTotalGrade() {
+            var table = document.getElementById("courseTable");
+            var rows = table.getElementsByTagName("tr");
+            var total = 0;
+
+            for (var i = 1; i < rows.length; i++) {
+                var semester1Grade = parseInt(rows[i].getElementsByTagName("td")[1].textContent);
+                var semester2Grade = parseInt(rows[i].getElementsByTagName("td")[2].textContent);
+                total += semester1Grade + semester2Grade;
+            }
+
+            var average = total / (rows.length - 1);
+            document.getElementById("totalGrade").textContent = average.toFixed(2);
+        }
+
+        calculateTotalGrade();
+
+        function printResult() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
